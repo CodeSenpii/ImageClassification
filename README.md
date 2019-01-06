@@ -203,7 +203,6 @@ hsv = cv2.cvtColor(test_im, cv2.COLOR_RGB2HSV)
 
 # Print image label
 print('Label: ' + str(test_label))
-
  ```
  
  Label: 1
@@ -234,3 +233,4 @@ ax3.imshow(s, cmap='gray')
 ax4.set_title('V channel')
 ax4.imshow(v, cmap='gray')
 ```
+![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/image1.png)
