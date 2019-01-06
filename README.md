@@ -234,3 +234,40 @@ ax4.set_title('V channel')
 ax4.imshow(v, cmap='gray')
 ```
 ![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/imag1.png)
+
+## Finding the average brightness of an image
+```python
+# Find the average Value or brightness of an image
+def avg_brightness(rgb_image):
+    
+    # Convert image to HSV
+    hsv = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV)
+
+    # Add up all the pixel values in the V channel
+    sum_brightness = np.sum(hsv[:,:,2])
+    
+    area = 600 * 1100.0
+    #Calculate the average brightness using the area of the image
+    # and the sum calculated above
+    avg = sum_brightness/area
+    
+    return avg
+```
+
+# Get avg values - Testing 
+
+```python
+# Testing average brightness levels
+# Look at a number of different day and night images and think about 
+# what average brightness value separates the two types of images
+
+# As an example, a "night" image is loaded in and its avg brightness is displayed
+image_num = 54
+
+test_im = STANDARDIZED_LIST[image_num][0]
+
+avg = avg_brightness(test_im)
+print('Avg brightness: ' + str(avg))
+plt.imshow(test_im)
+```
+Avg brightness: 87.22738787878788
