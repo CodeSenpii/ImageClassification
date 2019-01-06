@@ -1,7 +1,6 @@
 # Day or Night Image Classification
-**simple image classification in python**
+**Simple image classification in python**
 
-# Simple Image Classifier
 ### Steps:
 
 1. Load the data set
@@ -14,6 +13,10 @@
 6. Calculate image intensity average
 7. Calculate average upper and lower bounds for each catagory
 8. TODO: finish the classifier code
+
+*output should be numeric and not catagorical - example:*
+ - *day -> 1*
+ - *night -> 0*
 
 
 
