@@ -14,7 +14,7 @@
 7. Calculate average upper and lower bounds for each catagory
 8. TODO: finish the classifier code
 
-*output should be numeric and not catagorical - example:*
+***output should be numeric and not catagorical - example:***
  - *day -> 1*
  - *night -> 0*
 
