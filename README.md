@@ -162,8 +162,8 @@ print("Shape: "+str(selected_image.shape))
 print("Label [1 = day, 0 = night]: " + str(selected_label))
 ```
 **Correct dimensions**
-Shape: (600, 1100, 3)
-Label [1 = day, 0 = night]: 1
+- Shape: (600, 1100, 3)
+- Label [1 = day, 0 = night]: 1
 
 ![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/day_image1.png)
 
