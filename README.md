@@ -167,3 +167,70 @@ Label [1 = day, 0 = night]: 1
 
 ![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/day_image1.png)
 
+# Feature extraction process
+
+** In this example we will be using the brightness feature of the image to do the classification. **
+
+** Its really simple! All we do is calulate the average brighness of the photo to determing whether it is a night time image or a daytime image **
+
+## We wll be using the "HSV color space" technique as part of the process
+
+
+### Step 1:  convert the RGB image to HSV
+
+
+### Let us see what happends when an image in conveted to HSV 
+
+ - ** get the image **
+ 
+ ```python
+ # EXAMPLE 1
+
+# first get the image
+
+image_num = 0
+test_im = STANDARDIZED_LIST[image_num][0]
+test_label = STANDARDIZED_LIST[image_num][1]
+ ```
+ 
+ # Convert the image from RGB to HSV
+ 
+ ```python
+ # Example 1 cont'
+
+# Convert to HSV
+hsv = cv2.cvtColor(test_im, cv2.COLOR_RGB2HSV)
+
+# Print image label
+print('Label: ' + str(test_label))
+
+ ```
+ 
+ Label: 1
+ 
+ ## Seperate the HSV Channels
+ 
+ ```python
+ # Example 1 cont'
+# Seperating the HSV channels
+
+# HSV channels
+h = hsv[:,:,0]  # channel 0
+s = hsv[:,:,1]  # channel 1
+v = hsv[:,:,2]  # channel 2
+ ```
+ 
+ ## Display the image in a Row
+ 
+ ```python
+ # Plot the original image and the three channels
+f, (ax1, ax2, ax3, ax4) = plt.subplots(1, 4, figsize=(20,10))
+ax1.set_title('Standardized image')
+ax1.imshow(test_im)
+ax2.set_title('H channel')
+ax2.imshow(h, cmap='gray')
+ax3.set_title('S channel')
+ax3.imshow(s, cmap='gray')
+ax4.set_title('V channel')
+ax4.imshow(v, cmap='gray')
+```
