@@ -161,7 +161,7 @@ plt.imshow(selected_image)
 print("Shape: "+str(selected_image.shape))
 print("Label [1 = day, 0 = night]: " + str(selected_label))
 ```
-** Correct dimensions **
+**Correct dimensions**
 Shape: (600, 1100, 3)
 Label [1 = day, 0 = night]: 1
 
