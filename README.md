@@ -140,3 +140,30 @@ def standardize(image_list):
         
     return standard_list
 ```
+## Lets Construct to standardized list
+
+```python
+# Standardize all training images
+STANDARDIZED_LIST = standardize(IMAGE_LIST)
+```
+
+# Visually verify the images have been converted successfully
+```python
+# Display a standardized image and its label
+
+# Select an image by index
+image_num = 0
+selected_image = STANDARDIZED_LIST[image_num][0]
+selected_label = STANDARDIZED_LIST[image_num][1]
+
+# Display image and data about it
+plt.imshow(selected_image)
+print("Shape: "+str(selected_image.shape))
+print("Label [1 = day, 0 = night]: " + str(selected_label))
+```
+** Correct dimensions **
+Shape: (600, 1100, 3)
+Label [1 = day, 0 = night]: 1
+
+
+
