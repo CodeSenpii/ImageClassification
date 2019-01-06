@@ -233,4 +233,4 @@ ax3.imshow(s, cmap='gray')
 ax4.set_title('V channel')
 ax4.imshow(v, cmap='gray')
 ```
-![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/image1.png)
+![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/imag1.png)
