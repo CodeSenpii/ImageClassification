@@ -11,7 +11,9 @@ simple image classification in python
     
 4. Visualise standardized data
 
-```
+
+
+```python
 # Helper functions  - Udacity.com- Intro To Self Driving Cars
 
 import os
