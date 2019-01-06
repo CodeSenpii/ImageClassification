@@ -165,5 +165,5 @@ print("Label [1 = day, 0 = night]: " + str(selected_label))
 Shape: (600, 1100, 3)
 Label [1 = day, 0 = night]: 1
 
-![Example Image](https://github.com/CodeSenpii/ImageClassification/day image1.png)
+![Example Image](https://github.com/CodeSenpii/ImageClassification/"day image1.png")
 
