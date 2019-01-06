@@ -272,3 +272,69 @@ plt.imshow(test_im)
 ```
 Avg brightness: 87.22738787878788
 ![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/night_image1.png)
+
+```python
+def image_ranges():
+''' This function finds the upper and lower range of the avg brightness for each catagory '''
+''' These values gives a good indication of how to set the classifier '''
+''' @Author Kieyn Parks
+    
+    # Ranges
+    lower_day = 0
+    upper_day = 0
+    counter1 = 0
+    counter2 = 0
+        
+    lower_night = 0
+    upper_night = 0
+        
+    for image in STANDARDIZED_LIST:
+        
+        img = image[0]
+        lab = image[1]    
+        
+        if lab == 1:
+            # Convert image to HSV
+            hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+            # Add up all the pixel values in the V channel
+            avg = np.sum(hsv[:,:,2]) / (600*1100.0)
+            
+            if lower_day > avg or lower_day == 0:
+                lower_day = avg
+            
+            if upper_day < avg or upper_day == 0:
+                upper_day = avg
+                
+            counter1 += 1
+            
+        elif lab == 0:
+             # Convert image to HSV
+            hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+            # Add up all the pixel values in the V channel
+            avg = np.sum(hsv[:,:,2]) / (600*1100.0)
+            
+            if lower_night > avg or lower_night == 0:
+                lower_night = avg
+            
+            if upper_night < avg or upper_night == 0:
+                upper_night = avg
+            
+            counter2 += 1
+    
+            
+    print("Day Range: ", lower_day,"-",upper_day, ":", counter1)
+    print("Night Range: ", lower_night,"-",upper_night, ":", counter2) 
+image_ranges()         
+```
+- **Day Range:  98.89392727272727 - 201.6465924242424 : 45**
+- **Night Range:  8.24230909090909 - 98.99117727272727 : 46**
+
+## Classifier
+```python
+# Not implimented
+
+if avg > 120:
+    print("day")
+else:
+    print("night")
+```
