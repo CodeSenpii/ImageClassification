@@ -10,6 +10,10 @@
     - standardize inputs and outputs
     
 4. Visualise standardized data
+5. Convert image to HSV
+6. Calculate image intensity average
+7. Calculate average upper and lower bounds for each catagory
+8. TODO: finish the classifier code
 
 
 
