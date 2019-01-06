@@ -271,3 +271,4 @@ print('Avg brightness: ' + str(avg))
 plt.imshow(test_im)
 ```
 Avg brightness: 87.22738787878788
+![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/night_image1.png)
