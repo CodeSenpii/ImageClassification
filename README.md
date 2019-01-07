@@ -261,7 +261,7 @@ def avg_brightness(rgb_image):
     return avg
 ```
 
-# Get avg values - Testing 
+# Get avg values - Testing using a Night time image
 
 ```python
 # Testing average brightness levels
@@ -277,9 +277,11 @@ avg = avg_brightness(test_im)
 print('Avg brightness: ' + str(avg))
 plt.imshow(test_im)
 ```
-Avg brightness: 87.22738787878788
+Avg brightness: 87.227 - Night
 ![Example Image](https://github.com/CodeSenpii/ImageClassification/blob/master/night_image1.png)
 
+## Calculating the entire night time range and day time range using the image_range() function bellow
+## This can be considered "Training"
 ```python
 def image_ranges():
 ''' This function finds the upper and lower range of the avg brightness for each catagory '''
